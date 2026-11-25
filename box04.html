@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic Videos & Films | Rohit Kol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./gallery.css?v=4">
+</head>
+<body>
+
+  <!-- Gallery Header with Quick Category Switcher -->
+  <header class="gallery-header">
+    <div class="gallery-container gallery-header-inner">
+      <a href="index.html#projects" class="btn-back-portfolio">
+        <span>← Back to Portfolio</span>
+      </a>
+
+      <!-- Quick Switcher Bar -->
+      <nav class="gallery-nav-pills">
+        <a href="box01.html" class="nav-pill-item">
+          <span class="pill-dot"></span> Reels (11)
+        </a>
+        <a href="box02.html" class="nav-pill-item">
+          <span class="pill-dot"></span> Motion Graphics (6)
+        </a>
+        <a href="box03.html" class="nav-pill-item">
+          <span class="pill-dot"></span> 3D Animation (7)
+        </a>
+        <a href="box04.html" class="nav-pill-item active">
+          <span class="pill-dot"></span> Cinematic Films (2)
+        </a>
+      </nav>
+
+      <div class="header-branding">
+        <span class="brand-name">ROHIT KOL</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Category Banner -->
+  <section class="category-hero">
+    <div class="category-hero-glow"></div>
+    <div class="gallery-container">
+      <span class="category-tag">4K / 1080P60 • DIRECTION & POST-PRODUCTION</span>
+      <h1 class="category-title">CINEMATIC VIDEOS</h1>
+      <p class="category-desc">
+        Narrative short films and official music videos crafted with cinematic pacing, evocative color grading, and immersive soundscapes. Stream the offline master or watch directly on YouTube.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cinematic Theater Showcase -->
+  <main class="gallery-container">
+    <div class="cinematic-theater">
+      
+      <!-- Video 1: THE STRANGE HOURS (Short Film) -->
+      <article class="theater-film-card">
+        <!-- Film Player Tabs -->
+        <div class="film-player-tabs">
+          <button class="player-tab-btn active" data-player="local">
+            <span>🎬 1080p60 Master Stream</span>
+          </button>
+          <button class="player-tab-btn" data-player="youtube">
+            <span>▶ YouTube Stream</span>
+          </button>
+        </div>
+
+        <!-- Local Master Video View (default active) -->
+        <div class="player-view-local theater-embed-box" 
+             data-video-src="./box04/THE%20STRANGE%20HOURS%20_%20Short%20Film%20(2026)_1080p60.mp4" 
+             data-title="THE STRANGE HOURS — Narrative Short Film" 
+             data-tag="Short Film • Narrative" 
+             data-desc="A psychological narrative short film exploring stillness, tension, and human emotion in the quiet hours. Edited with deliberate pacing, atmospheric sound design, and deep cinematic contrast.">
+          <div class="landscape-video-wrapper" style="height: 100%;">
+            <video src="./box04/THE%20STRANGE%20HOURS%20_%20Short%20Film%20(2026)_1080p60.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="video-play-overlay">
+              <div class="overlay-badge-row">
+                <span class="tech-badge">HIGH BITRATE MASTER</span>
+                <span class="tech-badge">1080P 60FPS</span>
+              </div>
+              <button class="sound-toggle-btn" title="Toggle Sound"><span class="sound-icon">🔇</span></button>
+            </div>
+            <div class="center-play-badge">
+              <span>▶ Watch Film in Cinema Mode</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- YouTube Embed View (toggled via tab) -->
+        <div class="player-view-youtube theater-embed-box" style="display: none;">
+          <iframe 
+            src="https://www.youtube.com/embed/_NmUPizly5U?rel=0&modestbranding=1" 
+            title="THE STRANGE HOURS | Short Film (2026)" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Film Metadata Plaque -->
+        <div class="theater-film-meta">
+          <div class="film-main-info">
+            <div class="film-badge-row">
+              <span class="film-tag">VIDEO 1 • SHORT FILM</span>
+              <span class="film-quality">1080p 60fps Master</span>
+              <span class="film-quality">Atmospheric Sound Design</span>
+              <span class="film-quality">Samaksh Films</span>
+            </div>
+            <h2 class="film-title">THE STRANGE HOURS — Short Film</h2>
+            <p class="film-synopsis">
+              A psychological narrative short film exploring stillness, tension, and human emotion in the quiet hours. Edited with deliberate pacing, atmospheric sound design, and deep cinematic contrast.
+            </p>
+
+            <div class="film-credits-grid">
+              <div class="credit-item">
+                <span class="credit-role">Post-Production</span>
+                <span class="credit-value">Rohit Kol</span>
+              </div>
+              <div class="credit-item">
+                <span class="credit-role">Production</span>
+                <span class="credit-value">Samaksh Films</span>
+              </div>
+              <div class="credit-item">
+                <span class="credit-role">Pacing & Flow</span>
+                <span class="credit-value">Narrative Tension</span>
+              </div>
+              <div class="credit-item">
+                <span class="credit-role">Sound Architecture</span>
+                <span class="credit-value">Immersive Foley / FX</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="film-actions">
+            <a href="https://youtu.be/_NmUPizly5U" target="_blank" rel="noopener noreferrer" class="btn-youtube-watch">
+              <span>Watch on YouTube</span>
+              <span>↗</span>
+            </a>
+            <span class="local-stream-note">High Bitrate 1080p60 Master</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Video 2: AARGH - Night Time (Official Music Video) -->
+      <article class="theater-film-card">
+        <!-- Film Player Tabs -->
+        <div class="film-player-tabs">
+          <button class="player-tab-btn active" data-player="local">
+            <span>🎬 1080p60 Master Stream</span>
+          </button>
+          <button class="player-tab-btn" data-player="youtube">
+            <span>▶ YouTube Stream</span>
+          </button>
+        </div>
+
+        <!-- Local Master Video View (default active) -->
+        <div class="player-view-local theater-embed-box" 
+             data-video-src="./box04/vd6s.net%20AARGH%20-%20Night%20Time%20(%20Official%20Music%20Video%20)%20__%20Prod%20By%20JAIGU%20__%20Daveedo%20Productions%20__%202025_1080p60.mp4" 
+             data-title="AARGH - Night Time — Official Music Video" 
+             data-tag="Official Music Video" 
+             data-desc="High-octane official music video for 'Night Time' featuring dynamic speed ramping, rhythmic jump cuts, neon visual aesthetics, and beat-locked editorial flow. Produced by JAIGU & Daveedo Productions.">
+          <div class="landscape-video-wrapper" style="height: 100%;">
+            <video src="./box04/vd6s.net%20AARGH%20-%20Night%20Time%20(%20Official%20Music%20Video%20)%20__%20Prod%20By%20JAIGU%20__%20Daveedo%20Productions%20__%202025_1080p60.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="video-play-overlay">
+              <div class="overlay-badge-row">
+                <span class="tech-badge">HIGH BITRATE MASTER</span>
+                <span class="tech-badge">1080P 60FPS</span>
+              </div>
+              <button class="sound-toggle-btn" title="Toggle Sound"><span class="sound-icon">🔇</span></button>
+            </div>
+            <div class="center-play-badge">
+              <span>▶ Watch Music Video in Cinema Mode</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- YouTube Embed View (toggled via tab) -->
+        <div class="player-view-youtube theater-embed-box" style="display: none;">
+          <iframe 
+            src="https://www.youtube.com/embed/5EW6t0a9ofU?rel=0&modestbranding=1" 
+            title="AARGH - Night Time (Official Music Video)" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Film Metadata Plaque -->
+        <div class="theater-film-meta">
+          <div class="film-main-info">
+            <div class="film-badge-row">
+              <span class="film-tag">VIDEO 2 • MUSIC VIDEO</span>
+              <span class="film-quality">1080p 60fps Master</span>
+              <span class="film-quality">Beat-Locked Flow</span>
+              <span class="film-quality">Prod by JAIGU</span>
+            </div>
+            <h2 class="film-title">AARGH - Night Time — Official Music Video</h2>
+            <p class="film-synopsis">
+              High-octane official music video for "Night Time" featuring dynamic speed ramping, rhythmic jump cuts, neon visual aesthetics, and beat-locked editorial flow. Produced by JAIGU & Daveedo Productions.
+            </p>
+
+            <div class="film-credits-grid">
+              <div class="credit-item">
+                <span class="credit-role">Post-Production & Cut</span>
+                <span class="credit-value">Rohit Kol</span>
+              </div>
+              <div class="credit-item">
+                <span class="credit-role">Production</span>
+                <span class="credit-value">Daveedo Productions</span>
+              </div>
+              <div class="credit-item">
+                <span class="credit-role">Music Producer</span>
+                <span class="credit-value">JAIGU</span>
+              </div>
+              <div class="credit-item">
+                <span class="credit-role">Editorial Style</span>
+                <span class="credit-value">Speed Ramping & VFX</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="film-actions">
+            <a href="https://youtu.be/5EW6t0a9ofU" target="_blank" rel="noopener noreferrer" class="btn-youtube-watch">
+              <span>Watch on YouTube</span>
+              <span>↗</span>
+            </a>
+            <span class="local-stream-note">High Bitrate 1080p60 Master</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="gallery-footer">
+    <div class="gallery-container">
+      <p>© 2026 Rohit Kol • Professional Video Editor & Post-Production Artist</p>
+    </div>
+  </footer>
+
+  <script src="./gallery.js?v=3"></script>
+</body>
+</html>

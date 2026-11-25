@@ -1,0 +1,1095 @@
+/* ==========================================================================
+   CSS STYLING - VIDEO GALLERY WINDOWS (BOX01, BOX02, BOX03, BOX04)
+   Professional Cinema Studio & Interactive Showcase
+   ========================================================================== */
+
+:root {
+  --bg-color: #060606;
+  --bg-card: rgba(18, 18, 18, 0.75);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-red: rgba(229, 9, 20, 0.35);
+  
+  --red-primary: #e50914;
+  --red-accent: #ff2a3b;
+  --red-glow: rgba(229, 9, 20, 0.45);
+  
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --text-sub: #707070;
+  
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-title: 'Bebas Neue', sans-serif;
+  
+  --container-max: 1360px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020202;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red-primary);
+}
+
+/* Base Container */
+.gallery-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ==========================================================================
+   GALLERY HEADER & QUICK SWITCHER NAV
+   ========================================================================== */
+.gallery-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(8, 8, 8, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.9rem 0;
+}
+
+.gallery-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-back-portfolio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 7px 16px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.btn-back-portfolio:hover {
+  background: rgba(229, 9, 20, 0.18);
+  border-color: var(--red-primary);
+  color: #ffffff;
+  transform: translateX(-3px);
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.35);
+}
+
+/* Quick Category Switcher Nav Pills */
+.gallery-nav-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 18, 18, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px;
+  border-radius: 999px;
+}
+
+.nav-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.nav-pill-item:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-pill-item.active {
+  background: var(--red-primary);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+}
+
+.nav-pill-item .pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.header-branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--red-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.brand-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+}
+
+/* ==========================================================================
+   CATEGORY HERO BANNER
+   ========================================================================== */
+.category-hero {
+  padding: 4.5rem 0 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.category-hero-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 650px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(229, 9, 20, 0.22) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.category-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red-primary);
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.category-title {
+  font-family: var(--font-title);
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 35px rgba(229, 9, 20, 0.35);
+}
+
+.category-desc {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   BOX 01: SMARTPHONE DEVICE FRAMES & INSTAGRAM REELS
+   ========================================================================== */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.2rem;
+  padding: 2.5rem 0 6rem;
+}
+
+.reel-card {
+  background: linear-gradient(145deg, rgba(25, 25, 25, 0.85) 0%, rgba(12, 12, 12, 0.95) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 36px;
+  padding: 8px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75), 0 0 25px rgba(229, 9, 20, 0.1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.reel-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(229, 9, 20, 0.6);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(229, 9, 20, 0.3);
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #000000;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 999px;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.phone-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Authentic Instagram Reels UI Overlay */
+.reel-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, transparent 25%, transparent 60%, rgba(0, 0, 0, 0.88) 100%);
+  z-index: 5;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.overlay-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+  margin-top: 12px;
+}
+
+.creator-handle {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sound-toggle-btn {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.sound-toggle-btn:hover {
+  background: var(--red-primary);
+  border-color: var(--red-primary);
+  transform: scale(1.1);
+}
+
+.overlay-sidebar {
+  position: absolute;
+  right: 14px;
+  bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 6;
+}
+
+.overlay-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.action-icon {
+  font-size: 1.25rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.action-count {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.overlay-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-right: 45px;
+}
+
+.reel-meta-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--red-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(229, 9, 20, 0.18);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.reel-overlay-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.reel-audio-track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.watch-full-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(229, 9, 20, 0.92);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(229, 9, 20, 0.65);
+  opacity: 0;
+  transition: all 0.25s ease;
+  z-index: 7;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.reel-card:hover .watch-full-badge {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* ==========================================================================
+   BOX 02 & BOX 03: 16:9 CINEMATIC LANDSCAPE CARDS
+   ========================================================================== */
+.landscape-grid,
+.box03-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+  gap: 2.2rem;
+  padding: 2.5rem 0 6rem;
+}
+
+.video-card-landscape {
+  background: linear-gradient(145deg, rgba(20, 14, 16, 0.75) 0%, rgba(10, 10, 10, 0.88) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  position: relative;
+}
+
+.video-card-landscape:hover {
+  transform: translateY(-8px);
+  border-color: rgba(229, 9, 20, 0.5);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 30px rgba(229, 9, 20, 0.2);
+}
+
+.landscape-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  overflow: hidden;
+}
+
+.landscape-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  background: rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+  z-index: 5;
+}
+
+.video-card-landscape:hover .video-play-overlay {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.center-play-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(229, 9, 20, 0.9);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+  opacity: 0.88;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.video-card-landscape:hover .center-play-badge {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 0 30px rgba(229, 9, 20, 0.85);
+}
+
+.overlay-badge-row {
+  display: flex;
+  gap: 6px;
+}
+
+.tech-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.video-info-landscape {
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(12, 12, 12, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-tags-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.duration-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  font-family: monospace;
+}
+
+.video-title-landscape {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.video-desc-landscape {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.tools-used-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tool-chip {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   BOX 04: CINEMATIC THEATER PREMIERE
+   ========================================================================== */
+.cinematic-theater {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2.5rem 0 6rem;
+}
+
+.theater-film-card {
+  background: linear-gradient(150deg, rgba(22, 12, 15, 0.85) 0%, rgba(10, 10, 10, 0.95) 100%);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(229, 9, 20, 0.15);
+  transition: all 0.35s ease;
+}
+
+.theater-film-card:hover {
+  border-color: rgba(229, 9, 20, 0.6);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9), 0 0 50px rgba(229, 9, 20, 0.25);
+}
+
+.theater-embed-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+}
+
+.theater-embed-box iframe,
+.theater-embed-box video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.theater-film-meta {
+  padding: 2.2rem 2.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  background: rgba(12, 12, 12, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.film-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 780px;
+}
+
+.film-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.film-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-primary);
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.film-quality {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.film-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  line-height: 1.05;
+}
+
+.film-synopsis {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.film-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.btn-youtube-watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #e50914;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 12px 24px;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(229, 9, 20, 0.45);
+  transition: all 0.25s ease;
+}
+
+.btn-youtube-watch:hover {
+  background: #ff2a3b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(229, 9, 20, 0.6);
+}
+
+.local-stream-note {
+  font-size: 0.76rem;
+  color: var(--text-sub);
+}
+
+.film-player-tabs {
+  display: flex;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 18px;
+}
+
+.player-tab-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-sub);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.player-tab-btn:hover {
+  color: #ffffff;
+  border-color: rgba(229, 9, 20, 0.5);
+  background: rgba(229, 9, 20, 0.1);
+}
+
+.player-tab-btn.active {
+  color: #ffffff;
+  background: var(--red-primary);
+  border-color: var(--red-primary);
+  box-shadow: 0 0 14px rgba(229, 9, 20, 0.4);
+}
+
+.film-credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.credit-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.credit-role {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--red-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.credit-value {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   UNIVERSAL CINEMA LIGHTBOX MODAL
+   ========================================================================== */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.lightbox-container {
+  position: relative;
+  z-index: 10;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-btn-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.lightbox-btn-close:hover {
+  background: var(--red-primary);
+  border-color: var(--red-primary);
+  transform: scale(1.1);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.lightbox-nav-btn.btn-prev { left: -70px; }
+.lightbox-nav-btn.btn-next { right: -70px; }
+
+.lightbox-nav-btn:hover {
+  background: var(--red-primary);
+  border-color: var(--red-primary);
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+.lightbox-media-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #0d0d0d;
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95), 0 0 40px rgba(229, 9, 20, 0.25);
+  max-height: 85vh;
+}
+
+.lightbox-video-frame.portrait-mode {
+  width: min(420px, 80vw);
+  aspect-ratio: 9 / 16;
+  background: #000;
+}
+
+.lightbox-video-frame.landscape-mode {
+  width: min(960px, 85vw);
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.lightbox-video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-meta {
+  padding: 1.2rem 1.6rem;
+  background: rgba(14, 14, 14, 0.98);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.meta-tags-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta-tag-pill {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--red-primary);
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.meta-counter {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  font-family: monospace;
+}
+
+.lightbox-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.lightbox-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* Footer in Gallery */
+.gallery-footer {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-sub);
+  font-size: 0.82rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .landscape-grid,
+  .box03-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lightbox-nav-btn.btn-prev { left: -10px; }
+  .lightbox-nav-btn.btn-next { right: -10px; }
+}
+
+@media (max-width: 768px) {
+  .gallery-header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 1rem 0;
+  }
+  .category-title {
+    font-size: clamp(2.6rem, 9vw, 4.2rem);
+  }
+  .landscape-grid,
+  .box03-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+  .reels-grid {
+    grid-template-columns: 1fr;
+    max-width: 330px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .theater-film-meta {
+    flex-direction: column;
+    padding: 1.6rem 1.4rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .film-actions {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .lightbox-nav-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-nav-pills {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 4px 6px 8px;
+    gap: 8px;
+    scrollbar-width: none;
+  }
+  .gallery-nav-pills::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-pill-item {
+    flex-shrink: 0;
+    font-size: 0.74rem;
+    padding: 7px 14px;
+  }
+  .category-hero {
+    padding: 3rem 0 2rem;
+  }
+  .category-desc {
+    font-size: 0.88rem;
+    padding: 0 0.5rem;
+  }
+  .video-info-landscape {
+    padding: 1.2rem 1.2rem;
+  }
+  .film-player-tabs {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+  }
+  .player-tab-btn {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+  .film-title {
+    font-size: 1.8rem;
+  }
+  .film-credits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .btn-youtube-watch {
+    width: 100%;
+    justify-content: center;
+  }
+  .lightbox-container {
+    width: 95vw;
+    max-height: 92vh;
+    padding: 6px;
+  }
+  .lightbox-video-frame.portrait-mode {
+    max-width: 290px;
+  }
+  .lightbox-meta {
+    padding: 1rem;
+  }
+  .lightbox-title {
+    font-size: 1.05rem;
+  }
+  .lightbox-btn-close {
+    top: -38px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}

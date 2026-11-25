@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohit Kol | Professional Video Editor & Post-Production Artist</title>
+  <!-- Google Fonts: Bebas Neue for Condensed Title, Caveat for Script, Plus Jakarta Sans for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css?v=22">
+</head>
+<body>
+
+  <!-- Minimalist Loading Indicator -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-bar-bg">
+        <div id="loader-bar" class="loader-bar-fill"></div>
+      </div>
+      <div id="loader-text" class="loader-text">0%</div>
+    </div>
+  </div>
+
+  <!-- Dynamic Scroll-Reacting Background Canvas (Permanently Fixed in Background) -->
+  <div id="canvas-container">
+    <canvas id="frame-canvas"></canvas>
+    <div class="global-vignette"></div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-branding">
+        <span class="role-highlight">VIDEO EDITOR</span>
+        <span class="role-sub">CINEMATIC CREATOR</span>
+      </div>
+      <a href="#contact" class="nav-cta">
+        <span>AVAILABLE FOR PROJECTS</span>
+        <span class="cta-plus">+</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section-hero" id="hero">
+    
+    <!-- Giant Background "PORTFOLIO" Typography -->
+    <div class="hero-bg-text-wrapper">
+      <div class="hero-bg-text">PORTFOLIO</div>
+    </div>
+
+    <!-- Hero Foreground Elements -->
+    <div class="section-container hero-content-wrapper">
+      
+      <!-- Left Column -->
+      <div class="hero-left-col">
+        <div class="hero-script-intro">Hello, I'm</div>
+        <h1 class="hero-name">ROHIT KOL</h1>
+        <h2 class="hero-role-title">VIDEO EDITOR</h2>
+        <p class="hero-bio-desc">
+          I sculpt narratives through rhythm, pacing, and visual emotion. Specializing in cinematic commercials, music videos, narrative films, and high-impact digital content. In addition to video editing, I am also skilled in 3D animation using Blender.
+        </p>
+        <div class="hero-location-badge">
+          <svg class="icon-pin" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>BASED IN INDIA</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Enhanced Cinematic Showcase -->
+      <div class="hero-right-col">
+        <div class="hero-feature-card">
+          <div class="feature-status-pill">
+            <span class="pulse-dot"></span>
+            <span>CREATIVE POST-PRODUCTION</span>
+          </div>
+
+          <div class="feature-header">
+            <span class="feature-circle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            </span>
+            <p class="feature-punchline">Turning raw footage into powerful cinematic stories.</p>
+          </div>
+
+          <div class="feature-rows">
+            <div class="feature-row-item">
+              <span class="row-index">01</span>
+              <div class="row-content">
+                <div class="row-title">Narrative Pacing & Sound Flow</div>
+                <div class="row-detail">Dynamic rhythm, dialogue clarity & seamless transitions</div>
+              </div>
+            </div>
+
+            <div class="feature-row-item">
+              <span class="row-index">02</span>
+              <div class="row-content">
+                <div class="row-title">3D Animation & CGI (Blender)</div>
+                <div class="row-detail">Custom 3D visual assets, lighting & physics simulations</div>
+              </div>
+            </div>
+
+            <div class="feature-row-item">
+              <span class="row-index">03</span>
+              <div class="row-content">
+                <div class="row-title">Dynamic Motion Cuts & VFX</div>
+                <div class="row-detail">High-retention social edits, speed ramps & color grading</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-software-strip">
+            <span class="software-pill">PREMIERE PRO</span>
+            <span class="software-pill">BLENDER 3D</span>
+            <span class="software-pill">AFTER EFFECTS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero-scroll-indicator">
+      <span class="indicator-mouse">
+        <span class="indicator-wheel"></span>
+      </span>
+      <span class="indicator-label">SCROLL TO SCRUB VIDEO</span>
+    </div>
+
+  </section>
+
+  <!-- Section: SELECTED PROJECTS (Video Editing Showcase) -->
+  <section class="section-projects" id="projects">
+    <div class="section-container">
+      <h3 class="section-heading">SELECTED PROJECTS</h3>
+
+      <div class="projects-grid">
+        <!-- Project 01: Instagram Reels -->
+        <a href="box01.html" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-thumb-box">
+            <video src="./box01/2025_09_30_00_59_IMG_2238.MP4#t=0.5" muted loop playsinline preload="metadata"></video>
+            <span class="card-play-pill"><span class="pill-dot"></span> 11 REELS ↗</span>
+            <div class="thumb-glow"></div>
+          </div>
+          <div class="project-meta">
+            <div class="project-info">
+              <h4 class="project-name">Instagram Reels</h4>
+              <p class="project-category">Viral Short-Form & Hook Edits</p>
+              <p class="project-role">11 Featured Videos</p>
+            </div>
+            <span class="project-link">
+              <span class="link-num">01</span>
+              <span class="link-arrow">↗</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Project 02: Motion Graphics -->
+        <a href="box02.html" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-thumb-box">
+            <video src="./box02/Comp%201.mp4#t=0.5" muted loop playsinline preload="metadata"></video>
+            <span class="card-play-pill"><span class="pill-dot"></span> 6 VIDEOS ↗</span>
+            <div class="thumb-glow"></div>
+          </div>
+          <div class="project-meta">
+            <div class="project-info">
+              <h4 class="project-name">Motion Graphics</h4>
+              <p class="project-category">Kinetic Typography & Product Ads</p>
+              <p class="project-role">6 Featured Videos</p>
+            </div>
+            <span class="project-link">
+              <span class="link-num">02</span>
+              <span class="link-arrow">↗</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Project 03: 3D Animation -->
+        <a href="box03.html" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-thumb-box">
+            <video src="./box03/2024_09_06_16_58_IMG_1263.MP4#t=0.5" muted loop playsinline preload="metadata"></video>
+            <span class="card-play-pill"><span class="pill-dot"></span> 7 CLIPS ↗</span>
+            <div class="thumb-glow"></div>
+          </div>
+          <div class="project-meta">
+            <div class="project-info">
+              <h4 class="project-name">3D Animation</h4>
+              <p class="project-category">Blender CGI & Dynamic Motion</p>
+              <p class="project-role">7 Featured Clips</p>
+            </div>
+            <span class="project-link">
+              <span class="link-num">03</span>
+              <span class="link-arrow">↗</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Project 04: Cinematic Videos -->
+        <a href="box04.html" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="project-thumb-box">
+            <video src="./box04/THE%20STRANGE%20HOURS%20_%20Short%20Film%20(2026)_1080p60.mp4#t=10" muted loop playsinline preload="metadata"></video>
+            <span class="card-play-pill"><span class="pill-dot"></span> 2 FILMS ↗</span>
+            <div class="thumb-glow"></div>
+          </div>
+          <div class="project-meta">
+            <div class="project-info">
+              <h4 class="project-name">Cinematic Videos</h4>
+              <p class="project-category">Short Films & Official Music Videos</p>
+              <p class="project-role">2 Major Releases</p>
+            </div>
+            <span class="project-link">
+              <span class="link-num">04</span>
+              <span class="link-arrow">↗</span>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: EDUCATION & SKILLS + WORK PROCESS + QUOTE -->
+  <section class="section-details" id="about">
+    <div class="section-container">
+      <div class="details-grid">
+        
+        <!-- Left Column: Experience, Education & Creative Arsenal -->
+        <div class="details-panel panel-left">
+          
+          <div class="panel-header">
+            <span class="panel-badge"><span class="pulse-dot"></span> CAREER & CREDENTIALS</span>
+            <h3 class="col-title">EXPERIENCE & EDUCATION</h3>
+          </div>
+
+          <!-- Experience Subsection -->
+          <div class="subsection">
+            <h4 class="sub-label">PROFESSIONAL EXPERIENCE</h4>
+            
+            <!-- Impact Marvel -->
+            <div class="exp-card">
+              <div class="exp-card-header">
+                <div class="exp-role-company">
+                  <span class="exp-role">Video Editor</span>
+                  <a href="https://impactmarvel.in/" target="_blank" rel="noopener noreferrer" class="company-logo-badge" title="Impact Marvel">
+                    <img src="./assets/impact-marvel-logo.png" alt="Impact Marvel Logo">
+                  </a>
+                </div>
+                <span class="exp-badge">1 YEAR ACTIVE</span>
+              </div>
+              <p class="exp-desc">
+                Video Editor at <a href="https://impactmarvel.in/" target="_blank" rel="noopener noreferrer" class="text-link">Impact Marvel</a> — Edited high-retention commercial videos, promotional content, YouTube long-forms, and branded social reels with dynamic pacing, motion graphics, and audio mastering.
+              </p>
+              <div class="item-micro-tags">
+                <span class="micro-tag">Commercial Video</span>
+                <span class="micro-tag">High-Retention Cuts</span>
+                <span class="micro-tag">Sound Design</span>
+              </div>
+            </div>
+
+            <!-- Freelance -->
+            <div class="exp-card">
+              <div class="exp-card-header">
+                <div class="exp-role-company">
+                  <span class="exp-role">Freelance Video Editor & 3D Artist</span>
+                </div>
+                <span class="exp-badge">1 YEAR ACTIVE</span>
+              </div>
+              <p class="exp-desc">
+                Independent Projects — Partnered with creators and brands to deliver custom cinematic video edits, promotional cuts, narrative pacing, and 3D Blender animations.
+              </p>
+              <div class="item-micro-tags">
+                <span class="micro-tag">Brand Promos</span>
+                <span class="micro-tag">Blender 3D CGI</span>
+                <span class="micro-tag">Color Grading</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Subsection -->
+          <div class="subsection">
+            <h4 class="sub-label">ACADEMIC BACKGROUND</h4>
+            
+            <div class="edu-card">
+              <div class="edu-card-header">
+                <div class="edu-title-block">
+                  <a href="http://maacbhopal.com/" target="_blank" rel="noopener noreferrer" class="institute-logo-link" title="MAAC Bhopal">
+                    <img src="./assets/maac-logo.png" alt="MAAC Bhopal Logo" class="institute-logo-img">
+                  </a>
+                  <span class="edu-degree">Advanced VFX Plus (ADVFX Plus)</span>
+                </div>
+                <span class="edu-status-badge"><span class="pulse-dot"></span> PURSUING</span>
+              </div>
+              <p class="edu-desc">
+                Enrolled at <a href="http://maacbhopal.com/" target="_blank" rel="noopener noreferrer" class="text-link">MAAC Bhopal</a> — Advanced Visual Effects, 3D Dynamic Simulations, Motion Tracking, Compositing & CGI Integration.
+              </p>
+              <div class="item-micro-tags">
+                <span class="micro-tag">VFX Compositing</span>
+                <span class="micro-tag">3D Dynamics</span>
+                <span class="micro-tag">Camera Tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills & Tools Subsection -->
+          <div class="subsection">
+            <h4 class="sub-label">TECHNICAL ARSENAL & SKILLS</h4>
+            
+            <div class="skills-categorized">
+              <div class="skill-category-group">
+                <span class="skill-category-label">CORE TOOLS:</span>
+                <div class="skills-tags">
+                  <span class="skill-tag highlight-tool">ADOBE PREMIERE PRO</span>
+                  <span class="skill-tag highlight-tool">BLENDER 3D</span>
+                  <span class="skill-tag highlight-tool">AFTER EFFECTS</span>
+                </div>
+              </div>
+
+              <div class="skill-category-group">
+                <span class="skill-category-label">POST-PRODUCTION:</span>
+                <div class="skills-tags">
+                  <span class="skill-tag">COLOR GRADING</span>
+                  <span class="skill-tag">SOUND DESIGN</span>
+                  <span class="skill-tag">AUDIO MASTERING</span>
+                  <span class="skill-tag">4K / 6K RAW WORKFLOW</span>
+                </div>
+              </div>
+
+              <div class="skill-category-group">
+                <span class="skill-category-label">CRAFT & FLOW:</span>
+                <div class="skills-tags">
+                  <span class="skill-tag">PACING & RHYTHM</span>
+                  <span class="skill-tag">3D ANIMATION</span>
+                  <span class="skill-tag">MOTION GRAPHICS</span>
+                  <span class="skill-tag">VISUAL EFFECTS (VFX)</span>
+                  <span class="skill-tag">MULTI-CAM EDITING</span>
+                  <span class="skill-tag">SPEED RAMPING</span>
+                  <span class="skill-tag">CINEMATIC TRANSITIONS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Note: 3D Animation using Blender -->
+          <div class="blender-note-card">
+            <div class="blender-note-header">
+              <span class="blender-icon-symbol">✦</span>
+              <span class="blender-badge">3D SPECIALIZATION</span>
+            </div>
+            <p class="blender-note-text">
+              <strong>Blender 3D CGI:</strong> In addition to video editing, I design and integrate custom <strong>3D animations and visual assets using Blender</strong> — elevating projects with custom 3D motion, title elements, and CGI environments.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Editing Process + Master Quote -->
+        <div class="details-panel panel-right">
+          
+          <div class="process-block">
+            <div class="panel-header">
+              <span class="panel-badge"><span class="pulse-dot"></span> 6-STAGE WORKFLOW</span>
+              <h3 class="col-title">EDITING PROCESS</h3>
+            </div>
+            
+            <div class="process-timeline">
+              <!-- Step 1 -->
+              <div class="process-step">
+                <div class="step-num-badge">01</div>
+                <div class="step-content">
+                  <h5 class="step-name">Ingestion & Logging</h5>
+                  <p class="step-detail">Footage review, metadata tagging, scene sorting & script selects</p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="process-step">
+                <div class="step-num-badge">02</div>
+                <div class="step-content">
+                  <h5 class="step-name">Assembly Cut</h5>
+                  <p class="step-detail">Rough structural narrative, scene layout & overarching story beats</p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="process-step">
+                <div class="step-num-badge">03</div>
+                <div class="step-content">
+                  <h5 class="step-name">Fine Cut & Pacing</h5>
+                  <p class="step-detail">Rhythm refinement, micro-trims, emotional pacing & dialogue flow</p>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="process-step">
+                <div class="step-num-badge">04</div>
+                <div class="step-content">
+                  <h5 class="step-name">VFX, 3D & Motion Design</h5>
+                  <p class="step-detail">Custom Blender 3D elements, title graphics, lower thirds & screen VFX</p>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="process-step">
+                <div class="step-num-badge">05</div>
+                <div class="step-content">
+                  <h5 class="step-name">Color Grade & Sound Mix</h5>
+                  <p class="step-detail">Cinematic color pass, dynamic EQ, dialogue cleanup & immersive SFX</p>
+                </div>
+              </div>
+
+              <!-- Step 6 -->
+              <div class="process-step">
+                <div class="step-num-badge">06</div>
+                <div class="step-content">
+                  <h5 class="step-name">Master Delivery</h5>
+                  <p class="step-detail">High-bitrate ProRes 4K master delivery & platform-optimized exports</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cinematic Director's Quote Card -->
+          <div class="quote-card-enhanced">
+            <div class="quote-ambient-glow"></div>
+            <div class="quote-header">
+              <span class="quote-icon">“</span>
+              <span class="quote-tag">CREATIVE PHILOSOPHY</span>
+            </div>
+            <blockquote class="quote-text">
+              Film editing is where the story truly comes to life. A great cut is invisible, but the emotion resonates forever.
+            </blockquote>
+            <div class="quote-author-block">
+              <div class="quote-signature">Rohit Kol</div>
+              <span class="quote-author-role">Video Editor & 3D Artist</span>
+            </div>
+            <a href="#contact" class="quote-cta-bar">
+              <span class="cta-banner">LET'S CREATE A MASTERPIECE TOGETHER</span>
+              <span class="cta-red-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: LET'S WORK TOGETHER / FOOTER -->
+  <footer class="section-footer" id="contact">
+    <div class="section-container">
+      <div class="footer-master-card">
+        
+        <div class="footer-grid">
+          <!-- Left: Headline, Highlights & Main CTA -->
+          <div class="footer-brand-col">
+            <div class="footer-status-pill">
+              <span class="pulse-dot"></span>
+              <span>OPEN FOR NEW COMMISSIONS</span>
+            </div>
+
+            <h2 class="footer-headline">
+              LET'S WORK<br>
+              TOGETHER <span class="sparkle-star">✦</span>
+            </h2>
+
+            <p class="footer-subtext">
+              Ready to create high-retention commercial edits, documentary projects, YouTube series, or 3D Blender animations? Let's turn raw footage into an unforgettable visual experience.
+            </p>
+
+            <div class="footer-highlights">
+              <div class="highlight-item">
+                <span class="highlight-check">✓</span>
+                <span>Story & Retention Driven Pacing</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-check">✓</span>
+                <span>Custom 3D Blender Animation & CGI</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-check">✓</span>
+                <span>High-End Color Grading & Sound Flow</span>
+              </div>
+            </div>
+
+            <a href="mailto:aerohit47@gmail.com" class="btn-primary-collab">
+              <span>START A CONVERSATION</span>
+              <span class="btn-arrow-circle">→</span>
+            </a>
+          </div>
+
+          <!-- Right: Interactive Direct Channel Cards -->
+          <div class="footer-channels-col">
+            <h4 class="channels-title">DIRECT CHANNELS</h4>
+            
+            <div class="channel-cards-list">
+              <!-- Email Card -->
+              <a href="mailto:aerohit47@gmail.com" class="channel-card">
+                <div class="channel-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="channel-meta">
+                  <span class="channel-label">DIRECT EMAIL</span>
+                  <span class="channel-value">aerohit47@gmail.com</span>
+                </div>
+                <span class="channel-arrow">↗</span>
+              </a>
+
+              <!-- Instagram Card -->
+              <a href="https://www.instagram.com/_.ae_rohit._/" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </div>
+                <div class="channel-meta">
+                  <span class="channel-label">INSTAGRAM & REELS</span>
+                  <span class="channel-value">@_.ae_rohit._</span>
+                </div>
+                <span class="channel-arrow">↗</span>
+              </a>
+
+              <!-- LinkedIn Card -->
+              <a href="https://www.linkedin.com/in/rohit-kol-4231ab2b3?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon-box font-badge">
+                  in
+                </div>
+                <div class="channel-meta">
+                  <span class="channel-label">LINKEDIN PROFILE</span>
+                  <span class="channel-value">rohit-kol-4231ab2b3</span>
+                </div>
+                <span class="channel-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <div class="copyright-text">
+            © 2026 Rohit Kol. All Rights Reserved.
+          </div>
+          <div class="footer-bottom-tag">
+            Professional Video Editor & 3D Artist · Based in India
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js?v=17"></script>
+</body>
+</html>
