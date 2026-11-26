@@ -96,13 +96,16 @@
     if (item.isPortrait) {
       mediaFrame.classList.add('portrait-mode');
       mediaFrame.classList.remove('landscape-mode');
+      mediaFrame.style.aspectRatio = '9 / 16';
     } else {
       mediaFrame.classList.add('landscape-mode');
       mediaFrame.classList.remove('portrait-mode');
+      mediaFrame.style.aspectRatio = '16 / 9';
     }
 
     video.onloadedmetadata = () => {
       if (video.videoWidth && video.videoHeight) {
+        mediaFrame.style.aspectRatio = `${video.videoWidth} / ${video.videoHeight}`;
         if (video.videoHeight > video.videoWidth) {
           mediaFrame.classList.add('portrait-mode');
           mediaFrame.classList.remove('landscape-mode');
